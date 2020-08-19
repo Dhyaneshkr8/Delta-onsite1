@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="heading">Text Editor</h1>
+  <div id="container">
+    <fieldset>
+      <button class="fontStyle italic" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"></button>
+      <button class="fontStyle bold" onclick="document.execCommand( 'bold',false,null);" title="Bold Highlighted Text"></button>
+      <button class="fontStyle underline" onclick="document.execCommand( 'underline',false,null);"></button>
+
+      <select id="input-font" class="input"  onchange="changeFont (this);">
+        <option value="Arial">Arial</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Sans serif">Sans serif</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+      </select>
+
+      <button class="fontStyle strikethrough" onclick="document.execCommand( 'strikethrough',false,null);"><strikethrough></strikethrough></button>
+      <button class="fontStyle align-left" onclick="document.execCommand( 'justifyLeft',false,null);"><justifyLeft></justifyLeft></button>
+      <button class="fontStyle align-center" onclick="document.execCommand( 'justifyCenter',false,null);"><justifyCenter></justifyCenter></button>
+      <button class="fontStyle align-right" onclick="document.execCommand( 'justifyRight',false,null);"><justifyRight></justifyRight></button>
+      <button class="fontStyle redo-apply" onclick="document.execCommand( 'redo',false,null);"><redo></redo></button>
+      <button class="fontStyle undo-apply" onclick="document.execCommand( 'undo',false,null);"><undo></undo></button>
+      <button class="fontStyle orderedlist" onclick="document.execCommand('insertOrderedList', false, null);"><insertOrderedList></insertOrderedList></button>
+      <button class="fontStyle unorderedlist" onclick="document.execCommand('insertUnorderedList',false, null)"><insertUnorderedList></insertUnorderedList></button>
+      <input class="color-apply" id="myColor" type="color" id="favcolor" name="favcolor" onchange="chooseColor()" value="Black">
+
+
+      <!-- font size start -->
+      <select id="fontSize" onclick="changeSize()">
+        <option value="1">8</option>
+        <option value="2">9</option>
+        <option value="3">10</option>
+        <option value="4">11</option>
+        <option value="5">12</option>
+        <option value="6">14</option>
+        <option value="7">16</option>
+        <option value="8">18</option>
+        <option value="9">20</option>
+        <option value="10">22</option>
+        <option value="11">24</option>
+        <option value="12">26</option>
+        <option value="13">28</option>
+        <option value="14">36</option>
+        <option value="15">48</option>
+        <option value="16">72</option>
+
+      </select>
+      <!-- font size end -->
+
+  </fieldset>
+
+
+    <textarea id="editor1" contenteditable="true" name="name" rows="8" cols="80" placeholder="Enter your text..."></textarea>
+
+</div>
+
+</body>
+</html>

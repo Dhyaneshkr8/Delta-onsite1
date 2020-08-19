@@ -1,0 +1,129 @@
+body {
+  font: 400 16px/1.4 'serif';
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+}
+
+#container #containerHeader {
+  text-align: center;
+  cursor: move;
+}
+
+#container #editor1 {
+  background-color: white;
+  border: 3px solid Black;
+  height: 320px;
+  width: 602px;
+  margin: 0px auto 0;
+  padding: 10px;
+}
+
+#container fieldset {
+  margin: 2px auto 0px;
+  width: 600px;
+  height: 26px;
+  background-color: #f2f2f2;
+  border: 3px solid Black;
+  border-bottom: none;
+
+}
+
+#container button {
+  width: 5ex;
+  text-align: center;
+  padding: 1px 3px;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+#container img {
+  width: 100%;
+}
+
+#container .bold {
+  background-image: url('bold.png');
+}
+
+#container .italic {
+  background-image: url('italics.png');
+}
+
+#container .underline {
+  background-image: url('underline.png');
+}
+
+#container .align-left {
+  background-image: url('align-left.png');
+  width: 40px;
+}
+
+#container .align-right {
+  background-image: url('align-right.png');
+  width: 40px;
+}
+
+#container .align-center {
+  width: 38px;
+  background-size: contain;
+  background-image: url('align-center.png');
+}
+
+#container .redo-apply {
+  background-image: url('redo.png');
+}
+
+#container .undo-apply {
+  background-image: url('undo.png');
+}
+
+#container .unorderedlist {
+  background-image: url('unordered-list.png');
+}
+
+#container .orderedlist {
+  background-image: url('ordered-list.png');
+}
+
+#container .strikethrough {
+  background-image: url('strikethrough.png');
+}
+
+#container .color-apply {
+  width: 20px;
+}
+
+#container #input-font {
+  width: 100px;
+  height: 25px;
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text);
+  color: #888;
+}
+
+#container .loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  line-height: 20px;
+}
+
+/* @keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+} */
